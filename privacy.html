@@ -12,13 +12,16 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
   h1 { font-size: 26px; line-height: 1.25; margin: 0 0 4px; }
-  h2 { font-size: 21px; margin: 40px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
-  h3 { font-size: 17px; margin: 24px 0 6px; color: var(--accent); }
+  h3 { font-size: 17px; margin: 28px 0 6px; color: var(--accent); }
   p, li { margin: 6px 0; }
   a { color: var(--accent); }
   .meta { color: var(--dim); margin: 0 0 16px; }
-  .lang { display: flex; gap: 12px; margin: 12px 0 0; }
+  .langs { display: flex; gap: 4px; }
+  .langs button { font: 600 14px/1 system-ui, sans-serif; color: var(--dim); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+  .langs button[aria-pressed="true"] { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+  .langs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .table { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 15px; }
   th, td { text-align: left; vertical-align: top; padding: 8px 10px; border: 1px solid var(--line); }
@@ -27,73 +30,115 @@
 </head>
 <body>
 <main>
-  <h1>Depth Survival — Политика конфиденциальности / Privacy Policy</h1>
-  <p class="meta">Последнее обновление / Last updated: 2026-09-26</p>
-  <nav class="lang"><a href="#ru">Русский</a><a href="#en">English</a></nav>
+  <div class="top">
+    <div>
+      <h1 data-lang="ru">Depth Survival — Политика конфиденциальности</h1>
+      <h1 data-lang="en" hidden>Depth Survival — Privacy Policy</h1>
+      <p class="meta" data-lang="ru">Последнее обновление: 26.09.2026</p>
+      <p class="meta" data-lang="en" hidden>Last updated: 2026-09-26</p>
+    </div>
+    <div class="langs" role="group" aria-label="Язык / Language">
+      <button type="button" data-set="ru" aria-pressed="true">RU</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
 
-  <h2 id="ru">Русский</h2>
-  <p>Depth Survival — офлайн-игра с онлайн-кооперативом и мировыми рейтингами. Мы собираем только то, что нужно для работы этих функций.</p>
+  <section data-lang="ru">
+    <p>Depth Survival — игра, в которую можно играть без интернета; онлайн нужен только для кооператива и мировых рейтингов. Мы обрабатываем только то, что нужно для работы этих функций.</p>
 
-  <h3>Какие данные обрабатываются</h3>
-  <div class="table"><table>
-    <tr><th>Данные</th><th>Зачем</th><th>Где хранятся</th></tr>
-    <tr><td>Прогресс игры (герои, снаряжение, валюта, настройки)</td><td>Сохранение игры</td><td>Только на вашем устройстве</td></tr>
-    <tr><td>Анонимный идентификатор игрока</td><td>Вход в онлайн-функции без регистрации</td><td>Unity Authentication</td></tr>
-    <tr><td>Имя игрока (вы выбираете его сами)</td><td>Показ в лобби кооператива и в рейтингах</td><td>Unity Leaderboards, другие игроки в вашей комнате</td></tr>
-    <tr><td>Результаты забегов (время, уровень, этап)</td><td>Мировые рейтинги</td><td>Unity Leaderboards</td></tr>
-    <tr><td>Сетевой адрес (IP) во время кооп-сессии</td><td>Соединение с другими игроками через сервер-ретранслятор</td><td>Unity Relay, только на время сессии</td></tr>
-  </table></div>
-  <p>Мы <b>не</b> собираем: настоящее имя, e-mail, телефон, контакты, геолокацию, фото, платёжные данные. Игра не требует регистрации и не содержит встроенных покупок.</p>
+    <h3>Какие данные обрабатываются</h3>
+    <div class="table"><table>
+      <tr><th>Данные</th><th>Зачем</th><th>Где хранятся</th></tr>
+      <tr><td>Прогресс игры (герои, снаряжение, валюта, настройки)</td><td>Сохранение игры</td><td>Только на вашем устройстве</td></tr>
+      <tr><td>Анонимный идентификатор игрока</td><td>Вход в онлайн-функции без регистрации</td><td>Unity Authentication</td></tr>
+      <tr><td>Имя игрока (вы придумываете его сами)</td><td>Показ в лобби кооператива и в рейтингах</td><td>Unity Leaderboards, другие игроки в вашей комнате</td></tr>
+      <tr><td>Результаты забегов (время, уровень, этап)</td><td>Мировые рейтинги</td><td>Unity Leaderboards</td></tr>
+      <tr><td>Сетевой адрес (IP) во время кооп-сессии</td><td>Соединение с другими игроками через сервер-ретранслятор</td><td>Unity Relay, только на время сессии</td></tr>
+    </table></div>
+    <p>Мы <b>не</b> собираем: настоящее имя, e-mail, телефон, контакты, геолокацию, фото, платёжные данные. Игра не требует регистрации и не содержит встроенных покупок.</p>
 
-  <h3>Сторонние сервисы</h3>
-  <p>Онлайн-функции работают на Unity Gaming Services (Unity Technologies): Authentication, Relay, Leaderboards. Их политика: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
-  <p>Если в игру будет добавлена реклама за вознаграждение, она будет показываться только по вашему нажатию, а эта политика будет обновлена с указанием рекламного провайдера.</p>
+    <h3>Сторонние сервисы</h3>
+    <p>Онлайн-функции работают на Unity Gaming Services (Unity Technologies): Authentication, Relay, Leaderboards. Их политика: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
+    <p>Если в игру будет добавлена реклама за вознаграждение, она будет показываться только по вашему нажатию, а эта политика будет обновлена с указанием рекламного провайдера.</p>
 
-  <h3>Ваш контроль</h3>
-  <ul>
-    <li>Играть можно без интернета — тогда никакие данные не отправляются.</li>
-    <li>Имя игрока можно сменить в настройках в любой момент.</li>
-    <li>«Сброс прогресса» в настройках удаляет сохранение на устройстве.</li>
-    <li>Чтобы удалить данные рейтингов и анонимный аккаунт, создайте обращение: <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>.</li>
-  </ul>
+    <h3>Ваш контроль</h3>
+    <ul>
+      <li>Играть можно без интернета — тогда никакие данные не отправляются.</li>
+      <li>Имя игрока вы придумываете сами; его видят другие игроки в кооперативе и в рейтингах. Не используйте в нём настоящие имя и фамилию.</li>
+      <li>«Сброс прогресса» в настройках удаляет сохранение на устройстве.</li>
+      <li>Чтобы удалить данные рейтингов и анонимный аккаунт, создайте обращение: <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>.</li>
+    </ul>
 
-  <h3>Дети</h3>
-  <p>Игра не предназначена для сбора данных детей и не запрашивает персональную информацию.</p>
+    <h3>Дети</h3>
+    <p>Игра не предназначена для сбора данных детей и не запрашивает персональную информацию.</p>
 
-  <h3>Изменения</h3>
-  <p>Новая версия политики публикуется по этому адресу; дата вверху обновляется.</p>
+    <h3>Изменения</h3>
+    <p>Новая версия политики публикуется по этому адресу; дата вверху обновляется.</p>
+  </section>
 
-  <h2 id="en">English</h2>
-  <p>Depth Survival is an offline game with online co-op and world leaderboards. We only process what those features need.</p>
+  <section data-lang="en" hidden>
+    <p>Depth Survival can be played without an internet connection; it only goes online for co-op and the world leaderboards. We only process what those features need.</p>
 
-  <h3>Data we process</h3>
-  <div class="table"><table>
-    <tr><th>Data</th><th>Purpose</th><th>Stored</th></tr>
-    <tr><td>Game progress (heroes, gear, currency, settings)</td><td>Saving your game</td><td>On your device only</td></tr>
-    <tr><td>Anonymous player ID</td><td>Online features without registration</td><td>Unity Authentication</td></tr>
-    <tr><td>Player name (chosen by you)</td><td>Shown in co-op lobbies and leaderboards</td><td>Unity Leaderboards, other players in your room</td></tr>
-    <tr><td>Run results (time, level, stage)</td><td>World leaderboards</td><td>Unity Leaderboards</td></tr>
-    <tr><td>Network address (IP) during a co-op session</td><td>Connecting players through a relay server</td><td>Unity Relay, for the session only</td></tr>
-  </table></div>
-  <p>We do <b>not</b> collect your real name, e-mail, phone number, contacts, location, photos or payment data. The game needs no account and has no in-app purchases.</p>
+    <h3>Data we process</h3>
+    <div class="table"><table>
+      <tr><th>Data</th><th>Purpose</th><th>Stored</th></tr>
+      <tr><td>Game progress (heroes, gear, currency, settings)</td><td>Saving your game</td><td>On your device only</td></tr>
+      <tr><td>Anonymous player ID</td><td>Online features without registration</td><td>Unity Authentication</td></tr>
+      <tr><td>Player name (you make it up yourself)</td><td>Shown in co-op lobbies and leaderboards</td><td>Unity Leaderboards, other players in your room</td></tr>
+      <tr><td>Run results (time, level, stage)</td><td>World leaderboards</td><td>Unity Leaderboards</td></tr>
+      <tr><td>Network address (IP) during a co-op session</td><td>Connecting players through a relay server</td><td>Unity Relay, for the session only</td></tr>
+    </table></div>
+    <p>We do <b>not</b> collect your real name, e-mail, phone number, contacts, location, photos or payment data. The game needs no account and has no in-app purchases.</p>
 
-  <h3>Third-party services</h3>
-  <p>Online features run on Unity Gaming Services (Unity Technologies): Authentication, Relay, Leaderboards. Their policy: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
-  <p>If rewarded ads are added later, they will only play when you tap to watch one, and this policy will be updated to name the ad provider.</p>
+    <h3>Third-party services</h3>
+    <p>Online features run on Unity Gaming Services (Unity Technologies): Authentication, Relay, Leaderboards. Their policy: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
+    <p>If rewarded ads are added later, they will only play when you tap to watch one, and this policy will be updated to name the ad provider.</p>
 
-  <h3>Your choices</h3>
-  <ul>
-    <li>You can play offline; then no data is sent at all.</li>
-    <li>You can change your player name in Settings at any time.</li>
-    <li>"Reset progress" in Settings deletes the save on your device.</li>
-    <li>To delete leaderboard entries and the anonymous account, open an issue: <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>.</li>
-  </ul>
+    <h3>Your choices</h3>
+    <ul>
+      <li>You can play offline; then no data is sent at all.</li>
+      <li>You make up your player name yourself; other players see it in co-op and on the leaderboards. Don't use your real name in it.</li>
+      <li>"Reset progress" in Settings deletes the save on your device.</li>
+      <li>To delete leaderboard entries and the anonymous account, open an issue: <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>.</li>
+    </ul>
 
-  <h3>Children</h3>
-  <p>The game is not designed to collect children's data and never asks for personal information.</p>
+    <h3>Children</h3>
+    <p>The game is not designed to collect children's data and never asks for personal information.</p>
 
-  <h3>Changes</h3>
-  <p>New versions of this policy are published at this address with an updated date.</p>
+    <h3>Changes</h3>
+    <p>New versions of this policy are published at this address with an updated date.</p>
+  </section>
 </main>
+<script>
+  // one language at a time: #ru / #en in the link, then the visitor's earlier choice, then the browser language
+  (function () {
+    function pick() {
+      var h = location.hash.replace('#', '');
+      if (h === 'ru' || h === 'en') return h;
+      try { var s = localStorage.getItem('lang'); if (s === 'ru' || s === 'en') return s; } catch (e) {}
+      var langs = navigator.languages || [navigator.language || ''];
+      for (var i = 0; i < langs.length; i++) {
+        var l = String(langs[i]).toLowerCase();
+        if (/^(ru|uk|be|kk)/.test(l)) return 'ru';
+        if (l) return 'en';
+      }
+      return 'ru';
+    }
+    function show(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+      document.querySelectorAll('[data-set]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang)); });
+    }
+    document.querySelectorAll('[data-set]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var lang = b.getAttribute('data-set');
+        try { localStorage.setItem('lang', lang); } catch (e) {}
+        history.replaceState(null, '', '#' + lang);
+        show(lang);
+      });
+    });
+    show(pick());
+  })();
+</script>
 </body>
 </html>
