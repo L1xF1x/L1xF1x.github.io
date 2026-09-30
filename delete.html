@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Depth Survival — Удаление данных / Data deletion</title>
+<style>
+  :root { --bg: #f6f3ee; --fg: #221d1a; --dim: #6b625b; --accent: #9a6b1c; --line: #ddd5ca; --card: #fffdf9; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16121a; --fg: #ece6dc; --dim: #a39a90; --accent: #e2b45a; --line: #3a3140; --card: #1f1a24; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 4px; }
+  h3 { font-size: 17px; margin: 28px 0 6px; color: var(--accent); }
+  p, li { margin: 6px 0; }
+  ol { padding-left: 22px; }
+  a { color: var(--accent); }
+  .meta { color: var(--dim); margin: 0 0 16px; }
+  .langs { display: flex; gap: 4px; }
+  .langs button { font: 600 14px/1 system-ui, sans-serif; color: var(--dim); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+  .langs button[aria-pressed="true"] { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+  .langs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .table { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border: 1px solid var(--line); }
+  th { color: var(--dim); font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <div>
+      <h1 data-lang="ru">Depth Survival — удаление данных</h1>
+      <h1 data-lang="en" hidden>Depth Survival — data deletion</h1>
+      <p class="meta" data-lang="ru">Разработчик: LixFix · Последнее обновление: 01.10.2026</p>
+      <p class="meta" data-lang="en" hidden>Developer: LixFix · Last updated: 2026-10-01</p>
+    </div>
+    <div class="langs" role="group" aria-label="Язык / Language">
+      <button type="button" data-set="ru" aria-pressed="true">RU</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <section data-lang="ru">
+    <p>На этой странице описано, как удалить данные, которые игра Depth Survival хранит в интернете. Регистрации в игре нет: онлайн хранится только то, что нужно для кооператива и мировых рейтингов.</p>
+
+    <h3>Как запросить удаление</h3>
+    <ol>
+      <li>Откройте игру: <b>Настройки → «Удалить онлайн-данные»</b> и нажмите <b>«Скопировать ID»</b>. Это анонимный идентификатор вашего аккаунта в игре.</li>
+      <li>Откройте страницу обращений <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>, нажмите <b>«New issue»</b>, в заголовке напишите «Удаление данных» и вставьте скопированный ID.</li>
+      <li>Если у вас нет аккаунта GitHub, напишите на контактную почту разработчика, указанную на странице Depth Survival в Google Play, и приложите ID.</li>
+      <li>Мы удалим данные и ответим на обращение.</li>
+    </ol>
+
+    <h3>Что удаляется и в какие сроки</h3>
+    <div class="table"><table>
+      <tr><th>Данные</th><th>Что происходит</th></tr>
+      <tr><td>Имя игрока</td><td>Удаляется в течение 30 дней после запроса</td></tr>
+      <tr><td>Результаты в мировых рейтингах</td><td>Удаляются в течение 30 дней после запроса</td></tr>
+      <tr><td>Анонимный идентификатор игрока (Unity Authentication)</td><td>Удаляется в течение 30 дней после запроса</td></tr>
+    </table></div>
+    <p>После удаления мы не храним эти данные. Технические журналы серверов Unity Gaming Services хранятся по <a href="https://unity.com/legal/privacy-policy">политике Unity</a>.</p>
+
+    <h3>Прогресс на устройстве</h3>
+    <p>Герои, снаряжение и валюта хранятся только на вашем телефоне и на сервер не отправляются. Удалить их можно в игре: <b>Настройки → «Сбросить прогресс»</b>, или просто удалив игру.</p>
+
+    <p><a href="privacy.html#ru">Политика конфиденциальности</a></p>
+  </section>
+
+  <section data-lang="en" hidden>
+    <p>This page explains how to delete the data Depth Survival keeps online. The game has no registration: only what co-op and the world leaderboards need is stored online.</p>
+
+    <h3>How to request deletion</h3>
+    <ol>
+      <li>Open the game: <b>Settings → Delete online data</b> and press <b>Copy the ID</b>. This is the anonymous ID of your game account.</li>
+      <li>Open the request page <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>, press <b>New issue</b>, title it "Data deletion" and paste the ID.</li>
+      <li>If you don't have a GitHub account, write to the developer's contact e-mail shown on the Depth Survival page in Google Play and include the ID.</li>
+      <li>We delete the data and reply to your request.</li>
+    </ol>
+
+    <h3>What is deleted and when</h3>
+    <div class="table"><table>
+      <tr><th>Data</th><th>What happens</th></tr>
+      <tr><td>Player name</td><td>Deleted within 30 days of the request</td></tr>
+      <tr><td>World leaderboard results</td><td>Deleted within 30 days of the request</td></tr>
+      <tr><td>Anonymous player ID (Unity Authentication)</td><td>Deleted within 30 days of the request</td></tr>
+    </table></div>
+    <p>After deletion we keep none of this data. Unity Gaming Services server logs are kept under <a href="https://unity.com/legal/privacy-policy">Unity's policy</a>.</p>
+
+    <h3>Progress on your device</h3>
+    <p>Heroes, gear and currency live only on your phone and are never sent to a server. Delete them in the game with <b>Settings → Reset progress</b>, or by uninstalling the game.</p>
+
+    <p><a href="privacy.html#en">Privacy policy</a></p>
+  </section>
+</main>
+<script>
+  // one language at a time: #ru / #en in the link, then the visitor's earlier choice, then the browser language
+  (function () {
+    function pick() {
+      var h = location.hash.replace('#', '');
+      if (h === 'ru' || h === 'en') return h;
+      try { var s = localStorage.getItem('lang'); if (s === 'ru' || s === 'en') return s; } catch (e) {}
+      var langs = navigator.languages || [navigator.language || ''];
+      for (var i = 0; i < langs.length; i++) {
+        var l = String(langs[i]).toLowerCase();
+        if (/^(ru|uk|be|kk)/.test(l)) return 'ru';
+        if (l) return 'en';
+      }
+      return 'ru';
+    }
+    function show(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+      document.querySelectorAll('[data-set]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang)); });
+    }
+    document.querySelectorAll('[data-set]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var lang = b.getAttribute('data-set');
+        try { localStorage.setItem('lang', lang); } catch (e) {}
+        history.replaceState(null, '', '#' + lang);
+        show(lang);
+      });
+    });
+    show(pick());
+  })();
+</script>
+</body>
+</html>
