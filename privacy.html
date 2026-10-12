@@ -34,8 +34,8 @@
     <div>
       <h1 data-lang="ru">Depth Survival — Политика конфиденциальности</h1>
       <h1 data-lang="en" hidden>Depth Survival — Privacy Policy</h1>
-      <p class="meta" data-lang="ru">Последнее обновление: 26.09.2026</p>
-      <p class="meta" data-lang="en" hidden>Last updated: 2026-09-26</p>
+      <p class="meta" data-lang="ru">Последнее обновление: 12.10.2026</p>
+      <p class="meta" data-lang="en" hidden>Last updated: 2026-10-12</p>
     </div>
     <div class="langs" role="group" aria-label="Язык / Language">
       <button type="button" data-set="ru" aria-pressed="true">RU</button>
@@ -44,66 +44,86 @@
   </div>
 
   <section data-lang="ru">
-    <p>Depth Survival — игра, в которую можно играть без интернета; онлайн нужен только для кооператива и мировых рейтингов. Мы обрабатываем только то, что нужно для работы этих функций.</p>
+    <p>Depth Survival — игра, в которую можно играть без интернета; онлайн нужен для кооператива и мировых рейтингов, для сохранения прогресса в облаке через Google Play Игры, для рекламы, которую вы запускаете сами, и для покупок через Google Play. Мы обрабатываем только то, что нужно для работы этих функций.</p>
 
     <h3>Какие данные обрабатываются</h3>
     <div class="table"><table>
       <tr><th>Данные</th><th>Зачем</th><th>Где хранятся</th></tr>
-      <tr><td>Прогресс игры (герои, снаряжение, валюта, настройки)</td><td>Сохранение игры</td><td>Только на вашем устройстве</td></tr>
-      <tr><td>Анонимный идентификатор игрока</td><td>Вход в онлайн-функции без регистрации</td><td>Unity Authentication</td></tr>
+      <tr><td>Прогресс игры (герои, снаряжение, валюта, купленные товары, настройки)</td><td>Сохранение игры; восстановление после переустановки и на новом телефоне</td><td>На вашем устройстве; копия — в Unity Cloud Save, если вы вошли в Google Play Игры</td></tr>
+      <tr><td>Идентификатор игрока Google Play Игры (если вы вошли)</td><td>Вход без регистрации и паролей: один и тот же игрок на всех ваших устройствах</td><td>Google Play Игры, Unity Authentication</td></tr>
+      <tr><td>Анонимный идентификатор игрока</td><td>Вход в онлайн-функции, если вы не вошли в Google Play Игры</td><td>Unity Authentication</td></tr>
       <tr><td>Имя игрока (вы придумываете его сами)</td><td>Показ в лобби кооператива и в рейтингах</td><td>Unity Leaderboards, другие игроки в вашей комнате</td></tr>
       <tr><td>Результаты забегов (время, уровень, этап)</td><td>Мировые рейтинги</td><td>Unity Leaderboards</td></tr>
       <tr><td>Сетевой адрес (IP) во время кооп-сессии</td><td>Соединение с другими игроками через сервер-ретранслятор</td><td>Unity Relay, только на время сессии</td></tr>
+      <tr><td>Статистика игры: начало и длительность сессий, пройденные этапы, гибели, выбранные герои, просмотры рекламы и покупки, модель устройства, версия Android, страна</td><td>Понять, где игра слишком сложная или скучная, и исправлять это</td><td>Unity Analytics — <b>только если вы разрешили</b></td></tr>
+      <tr><td>Рекламный идентификатор устройства, IP-адрес, сведения об устройстве и о показах рекламы</td><td>Реклама за вознаграждение, которую вы запускаете сами; учёт показов, защита от мошенничества</td><td>Google AdMob (Google)</td></tr>
+      <tr><td>Купленные товары</td><td>Выдача купленного; звезда «поддержал игру» у имени в кооперативе и рейтингах</td><td>Google Play (оплата), ваше устройство и облачное сохранение (список товаров), Unity Leaderboards (только уровень поддержки)</td></tr>
     </table></div>
-    <p>Мы <b>не</b> собираем: настоящее имя, e-mail, телефон, контакты, геолокацию, фото, платёжные данные. Игра не требует регистрации и не содержит встроенных покупок.</p>
+    <p>Мы <b>не</b> получаем: ваше настоящее имя, e-mail, телефон, контакты, точную геолокацию, фото. При входе в Google Play Игры игра получает только идентификатор игрока, без почты и данных профиля Google. Оплату покупок проводит Google Play — платёжные данные мы не получаем.</p>
 
     <h3>Сторонние сервисы</h3>
-    <p>Онлайн-функции работают на Unity Gaming Services (Unity Technologies): Authentication, Relay, Leaderboards. Их политика: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
-    <p>Если в игру будет добавлена реклама за вознаграждение, она будет показываться только по вашему нажатию, а эта политика будет обновлена с указанием рекламного провайдера.</p>
+    <p>Онлайн-функции работают на Unity Gaming Services (Unity Technologies): Authentication, Cloud Save, Relay, Leaderboards, Analytics. Их политика: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
+    <p>Вход и облачное сохранение — через Google Play Игры (Google). Политика Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+    <p>Реклама — Google AdMob. Ролик показывается только когда вы сами нажимаете кнопку награды (сундук в лавке, второй шанс, удвоение награды); баннеров и принудительной рекламы нет. Игрокам из ЕЭС и Великобритании Google сначала показывает форму согласия. Как Google использует данные приложений-партнёров: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+    <p>Покупки проходят через Google Play.</p>
 
     <h3>Ваш контроль</h3>
     <ul>
       <li>Играть можно без интернета — тогда никакие данные не отправляются.</li>
+      <li>Статистику игра собирает только после вашего разрешения при первом запуске. Изменить выбор можно в любой момент: Настройки → «Статистика игры».</li>
+      <li>Вход в Google Play Игры не обязателен: без него прогресс хранится только на телефоне.</li>
+      <li>Реклама — только по вашему нажатию. Покупка «Без рекламы» выдаёт эти награды без роликов.</li>
+      <li>Согласие на рекламу (ЕЭС, Великобритания) меняется в игре: Настройки → «Конфиденциальность рекламы». Рекламный идентификатор можно сбросить или удалить в настройках Android (Google → Реклама).</li>
       <li>Имя игрока вы придумываете сами; его видят другие игроки в кооперативе и в рейтингах. Не используйте в нём настоящие имя и фамилию.</li>
-      <li>«Сброс прогресса» в настройках удаляет сохранение на устройстве.</li>
-      <li>Чтобы удалить данные рейтингов и анонимный аккаунт, создайте обращение: <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>.</li>
+      <li>«Сброс прогресса» в настройках удаляет сохранение на устройстве и в облаке.</li>
+      <li>Чтобы удалить все онлайн-данные (облачное сохранение, рейтинги, статистику и аккаунт игрока), следуйте инструкции на странице <a href="delete.html#ru">удаления данных</a>.</li>
     </ul>
 
     <h3>Дети</h3>
-    <p>Игра не предназначена для сбора данных детей и не запрашивает персональную информацию.</p>
+    <p>Игра рассчитана на игроков от 13 лет и не предназначена для детей младше 13. Мы не запрашиваем персональную информацию.</p>
 
     <h3>Изменения</h3>
     <p>Новая версия политики публикуется по этому адресу; дата вверху обновляется.</p>
   </section>
 
   <section data-lang="en" hidden>
-    <p>Depth Survival can be played without an internet connection; it only goes online for co-op and the world leaderboards. We only process what those features need.</p>
+    <p>Depth Survival can be played without an internet connection; it goes online for co-op and the world leaderboards, for cloud saves through Google Play Games, for ads you choose to watch and for Google Play purchases. We only process what those features need.</p>
 
     <h3>Data we process</h3>
     <div class="table"><table>
       <tr><th>Data</th><th>Purpose</th><th>Stored</th></tr>
-      <tr><td>Game progress (heroes, gear, currency, settings)</td><td>Saving your game</td><td>On your device only</td></tr>
-      <tr><td>Anonymous player ID</td><td>Online features without registration</td><td>Unity Authentication</td></tr>
+      <tr><td>Game progress (heroes, gear, currency, purchased products, settings)</td><td>Saving your game; restoring it after a reinstall or on a new phone</td><td>On your device; a copy in Unity Cloud Save if you are signed in to Google Play Games</td></tr>
+      <tr><td>Google Play Games player ID (if you are signed in)</td><td>Sign-in without registration or passwords: the same player on all your devices</td><td>Google Play Games, Unity Authentication</td></tr>
+      <tr><td>Anonymous player ID</td><td>Online features when you are not signed in to Google Play Games</td><td>Unity Authentication</td></tr>
       <tr><td>Player name (you make it up yourself)</td><td>Shown in co-op lobbies and leaderboards</td><td>Unity Leaderboards, other players in your room</td></tr>
       <tr><td>Run results (time, level, stage)</td><td>World leaderboards</td><td>Unity Leaderboards</td></tr>
       <tr><td>Network address (IP) during a co-op session</td><td>Connecting players through a relay server</td><td>Unity Relay, for the session only</td></tr>
+      <tr><td>Gameplay statistics: session start and length, stages played, deaths, heroes chosen, ad views and purchases, device model, Android version, country</td><td>Finding where the game is too hard or dull and fixing it</td><td>Unity Analytics — <b>only if you allow it</b></td></tr>
+      <tr><td>Device advertising ID, IP address, device and ad-view information</td><td>Rewarded ads you start yourself; counting views, fraud prevention</td><td>Google AdMob (Google)</td></tr>
+      <tr><td>Purchased products</td><td>Delivering what you bought; the "supporter" star by your name in co-op and the leaderboards</td><td>Google Play (payment), your device and cloud save (list of products), Unity Leaderboards (support tier only)</td></tr>
     </table></div>
-    <p>We do <b>not</b> collect your real name, e-mail, phone number, contacts, location, photos or payment data. The game needs no account and has no in-app purchases.</p>
+    <p>We do <b>not</b> receive your real name, e-mail, phone number, contacts, precise location or photos. Signing in to Google Play Games gives the game only a player ID — no e-mail or Google profile data. Purchases are paid through Google Play — we never receive payment details.</p>
 
     <h3>Third-party services</h3>
-    <p>Online features run on Unity Gaming Services (Unity Technologies): Authentication, Relay, Leaderboards. Their policy: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
-    <p>If rewarded ads are added later, they will only play when you tap to watch one, and this policy will be updated to name the ad provider.</p>
+    <p>Online features run on Unity Gaming Services (Unity Technologies): Authentication, Cloud Save, Relay, Leaderboards, Analytics. Their policy: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
+    <p>Sign-in and cloud saves go through Google Play Games (Google). Google's policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+    <p>Ads are served by Google AdMob. A video only plays when you tap a reward button yourself (the shop chest, a second chance, doubling a reward); there are no banners or forced ads. Players in the EEA and the UK see Google's consent form first. How Google uses data from partner apps: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+    <p>Purchases go through Google Play.</p>
 
     <h3>Your choices</h3>
     <ul>
       <li>You can play offline; then no data is sent at all.</li>
-      <li>You make up your player name yourself; other players see it in co-op and on the leaderboards. Don't use your real name in it.</li>
-      <li>"Reset progress" in Settings deletes the save on your device.</li>
-      <li>To delete leaderboard entries and the anonymous account, open an issue: <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>.</li>
+      <li>The game collects statistics only after you allow it on the first launch. Change your choice at any time: Settings → Gameplay statistics.</li>
+      <li>Signing in to Google Play Games is optional: without it your progress stays on the phone only.</li>
+      <li>Ads only play when you tap. The "No ads" purchase gives those rewards without videos.</li>
+      <li>Your ad consent (EEA, UK) can be changed in the game: Settings → Ad privacy. The advertising ID can be reset or deleted in Android settings (Google → Ads).</li>
+      <li>You make up your player name yourself; other players see it in co-op and on the leaderboards. Do not use your real name in it.</li>
+      <li>"Reset progress" in Settings deletes the save on your device and in the cloud.</li>
+      <li>To delete all online data (cloud save, leaderboard entries, statistics and the player account), follow the <a href="delete.html#en">data deletion</a> page.</li>
     </ul>
 
     <h3>Children</h3>
-    <p>The game is not designed to collect children's data and never asks for personal information.</p>
+    <p>The game is meant for players aged 13 and over and is not directed at children under 13. We never ask for personal information.</p>
 
     <h3>Changes</h3>
     <p>New versions of this policy are published at this address with an updated date.</p>

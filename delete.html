@@ -35,8 +35,8 @@
     <div>
       <h1 data-lang="ru">Depth Survival — удаление данных</h1>
       <h1 data-lang="en" hidden>Depth Survival — data deletion</h1>
-      <p class="meta" data-lang="ru">Разработчик: LixFix · Последнее обновление: 01.10.2026</p>
-      <p class="meta" data-lang="en" hidden>Developer: LixFix · Last updated: 2026-10-01</p>
+      <p class="meta" data-lang="ru">Разработчик: LixFix · Последнее обновление: 12.10.2026</p>
+      <p class="meta" data-lang="en" hidden>Developer: LixFix · Last updated: 2026-10-12</p>
     </div>
     <div class="langs" role="group" aria-label="Язык / Language">
       <button type="button" data-set="ru" aria-pressed="true">RU</button>
@@ -45,11 +45,11 @@
   </div>
 
   <section data-lang="ru">
-    <p>На этой странице описано, как удалить данные, которые игра Depth Survival хранит в интернете. Регистрации в игре нет: онлайн хранится только то, что нужно для кооператива и мировых рейтингов.</p>
+    <p>На этой странице описано, как удалить данные, которые игра Depth Survival хранит в интернете. Регистрации с паролем в игре нет: аккаунт игрока создаётся сам — анонимно или через вход в Google Play Игры.</p>
 
     <h3>Как запросить удаление</h3>
     <ol>
-      <li>Откройте игру: <b>Настройки → «Удалить онлайн-данные»</b> и нажмите <b>«Скопировать ID»</b>. Это анонимный идентификатор вашего аккаунта в игре.</li>
+      <li>Откройте игру: <b>Настройки → «Удалить онлайн-данные»</b> и нажмите <b>«Скопировать ID»</b>. Это идентификатор вашего аккаунта в игре.</li>
       <li>Откройте страницу обращений <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>, нажмите <b>«New issue»</b>, в заголовке напишите «Удаление данных» и вставьте скопированный ID.</li>
       <li>Если у вас нет аккаунта GitHub, напишите на контактную почту разработчика, указанную на странице Depth Survival в Google Play, и приложите ID.</li>
       <li>Мы удалим данные и ответим на обращение.</li>
@@ -60,22 +60,24 @@
       <tr><th>Данные</th><th>Что происходит</th></tr>
       <tr><td>Имя игрока</td><td>Удаляется в течение 30 дней после запроса</td></tr>
       <tr><td>Результаты в мировых рейтингах</td><td>Удаляются в течение 30 дней после запроса</td></tr>
-      <tr><td>Анонимный идентификатор игрока (Unity Authentication)</td><td>Удаляется в течение 30 дней после запроса</td></tr>
+      <tr><td>Облачное сохранение прогресса (Unity Cloud Save)</td><td>Удаляется в течение 30 дней после запроса</td></tr>
+      <tr><td>Статистика игры (Unity Analytics)</td><td>Удаляется в течение 30 дней после запроса</td></tr>
+      <tr><td>Аккаунт игрока (Unity Authentication) и его связь с Google Play Игры</td><td>Удаляется в течение 30 дней после запроса</td></tr>
     </table></div>
     <p>После удаления мы не храним эти данные. Технические журналы серверов Unity Gaming Services хранятся по <a href="https://unity.com/legal/privacy-policy">политике Unity</a>.</p>
 
-    <h3>Прогресс на устройстве</h3>
-    <p>Герои, снаряжение и валюта хранятся только на вашем телефоне и на сервер не отправляются. Удалить их можно в игре: <b>Настройки → «Сбросить прогресс»</b>, или просто удалив игру.</p>
+    <h3>Прогресс</h3>
+    <p>Герои, снаряжение и валюта хранятся на вашем телефоне, а если вы вошли в Google Play Игры — ещё и копия в облаке. <b>Настройки → «Сбросить прогресс»</b> удаляет и то и другое сразу. Статистику можно выключить в <b>Настройки → «Статистика игры»</b>.</p>
 
     <p><a href="privacy.html#ru">Политика конфиденциальности</a></p>
   </section>
 
   <section data-lang="en" hidden>
-    <p>This page explains how to delete the data Depth Survival keeps online. The game has no registration: only what co-op and the world leaderboards need is stored online.</p>
+    <p>This page explains how to delete the data Depth Survival keeps online. The game has no password registration: the player account is created automatically — anonymously or by signing in to Google Play Games.</p>
 
     <h3>How to request deletion</h3>
     <ol>
-      <li>Open the game: <b>Settings → Delete online data</b> and press <b>Copy the ID</b>. This is the anonymous ID of your game account.</li>
+      <li>Open the game: <b>Settings → Delete online data</b> and press <b>Copy the ID</b>. This is the ID of your game account.</li>
       <li>Open the request page <a href="https://github.com/L1xF1x/L1xF1x.github.io/issues">github.com/L1xF1x/L1xF1x.github.io/issues</a>, press <b>New issue</b>, title it "Data deletion" and paste the ID.</li>
       <li>If you don't have a GitHub account, write to the developer's contact e-mail shown on the Depth Survival page in Google Play and include the ID.</li>
       <li>We delete the data and reply to your request.</li>
@@ -86,12 +88,14 @@
       <tr><th>Data</th><th>What happens</th></tr>
       <tr><td>Player name</td><td>Deleted within 30 days of the request</td></tr>
       <tr><td>World leaderboard results</td><td>Deleted within 30 days of the request</td></tr>
-      <tr><td>Anonymous player ID (Unity Authentication)</td><td>Deleted within 30 days of the request</td></tr>
+      <tr><td>Cloud save of your progress (Unity Cloud Save)</td><td>Deleted within 30 days of the request</td></tr>
+      <tr><td>Gameplay statistics (Unity Analytics)</td><td>Deleted within 30 days of the request</td></tr>
+      <tr><td>Player account (Unity Authentication) and its link to Google Play Games</td><td>Deleted within 30 days of the request</td></tr>
     </table></div>
     <p>After deletion we keep none of this data. Unity Gaming Services server logs are kept under <a href="https://unity.com/legal/privacy-policy">Unity's policy</a>.</p>
 
-    <h3>Progress on your device</h3>
-    <p>Heroes, gear and currency live only on your phone and are never sent to a server. Delete them in the game with <b>Settings → Reset progress</b>, or by uninstalling the game.</p>
+    <h3>Progress</h3>
+    <p>Heroes, gear and currency live on your phone and, if you are signed in to Google Play Games, as a copy in the cloud. <b>Settings → Reset progress</b> deletes both at once. Statistics can be turned off in <b>Settings → Gameplay statistics</b>.</p>
 
     <p><a href="privacy.html#en">Privacy policy</a></p>
   </section>
