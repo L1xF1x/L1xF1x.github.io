@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Last Lamplighter — Политика конфиденциальности / Privacy Policy</title>
+<style>
+  :root { --bg: #f6f3ee; --fg: #221d1a; --dim: #6b625b; --accent: #9a6b1c; --line: #ddd5ca; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14121c; --fg: #ece6dc; --dim: #a39a90; --accent: #f0b85a; --line: #3a3140; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 4px; }
+  h3 { font-size: 17px; margin: 28px 0 6px; color: var(--accent); }
+  p, li { margin: 6px 0; }
+  a { color: var(--accent); }
+  .meta { color: var(--dim); margin: 0 0 16px; }
+  .langs { display: flex; gap: 4px; }
+  .langs button { font: 600 14px/1 system-ui, sans-serif; color: var(--dim); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+  .langs button[aria-pressed="true"] { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <div>
+      <h1 data-lang="ru">Последний Фонарщик — Политика конфиденциальности</h1>
+      <h1 data-lang="en" hidden>Last Lamplighter — Privacy Policy</h1>
+      <p class="meta" data-lang="ru">Последнее обновление: 11.11.2026</p>
+      <p class="meta" data-lang="en" hidden>Last updated: 2026-11-11</p>
+    </div>
+    <div class="langs" role="group" aria-label="Язык / Language">
+      <button type="button" data-set="ru" aria-pressed="true">RU</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <section data-lang="ru">
+    <p>Эта политика относится к игре «Последний Фонарщик» (Last Lamplighter, пакет com.lixfix.lamplighter) для Android. Разработчик — независимый автор LixFix.</p>
+    <h3>Какие данные собирает игра</h3>
+    <p><b>Никаких.</b> Игра работает без интернета. Она не собирает, не хранит на серверах и не передаёт третьим лицам никакие персональные или технические данные: ни имён, ни адресов почты, ни идентификаторов устройства, ни местоположения, ни статистики.</p>
+    <h3>Что хранится на устройстве</h3>
+    <p>Прогресс (пройденные этапы, улучшения лагеря, рекорды) и настройки сохраняются только в памяти вашего телефона, в папке приложения. Эти файлы никуда не отправляются. Удалить их можно в игре (Настройки → Сбросить прогресс) или удалив приложение.</p>
+    <h3>Реклама и покупки</h3>
+    <p>В игре нет рекламы и нет встроенных покупок.</p>
+    <h3>Разрешения</h3>
+    <p>Игре не нужны особые разрешения Android (камера, микрофон, контакты, местоположение и т.п.).</p>
+    <h3>Дети</h3>
+    <p>Игра не предназначена специально для детей младше 13 лет и не собирает данные ни от кого, включая детей.</p>
+    <h3>Изменения</h3>
+    <p>Если в будущей версии появится что-то, связанное с данными (например, облачные сохранения или реклама), эта страница будет обновлена до выхода такой версии.</p>
+    <h3>Связь</h3>
+    <p>Вопросы о политике можно задать через страницу игры в Google Play («Связаться с разработчиком»).</p>
+  </section>
+
+  <section data-lang="en" hidden>
+    <p>This policy covers the Android game "Last Lamplighter" (package com.lixfix.lamplighter) by the independent developer LixFix.</p>
+    <h3>What data the game collects</h3>
+    <p><b>None.</b> The game works offline. It does not collect, store on servers or share with third parties any personal or technical data: no names, email addresses, device identifiers, location or statistics.</p>
+    <h3>What is kept on your device</h3>
+    <p>Your progress (cleared stages, camp upgrades, records) and settings are saved only on your phone, in the app's own folder. These files are never sent anywhere. You can erase them in the game (Settings → Reset progress) or by uninstalling the app.</p>
+    <h3>Ads and purchases</h3>
+    <p>The game has no ads and no in-app purchases.</p>
+    <h3>Permissions</h3>
+    <p>The game needs no special Android permissions (camera, microphone, contacts, location and so on).</p>
+    <h3>Children</h3>
+    <p>The game is not directed at children under 13 and collects no data from anyone, children included.</p>
+    <h3>Changes</h3>
+    <p>If a future version adds anything involving data (for example cloud saves or ads), this page will be updated before that version is released.</p>
+    <h3>Contact</h3>
+    <p>Questions about this policy: use "Contact developer" on the game's Google Play page.</p>
+  </section>
+</main>
+<script>
+  function setLang(l) {
+    document.querySelectorAll('[data-lang]').forEach(e => e.hidden = e.dataset.lang !== l);
+    document.querySelectorAll('[data-set]').forEach(b => b.setAttribute('aria-pressed', b.dataset.set === l));
+    document.documentElement.lang = l;
+  }
+  document.querySelectorAll('[data-set]').forEach(b => b.onclick = () => { setLang(b.dataset.set); history.replaceState(null, '', '#' + b.dataset.set); });
+  setLang(location.hash === '#en' ? 'en' : location.hash === '#ru' ? 'ru' : (navigator.language || '').startsWith('ru') ? 'ru' : 'en');
+</script>
+</body>
+</html>
